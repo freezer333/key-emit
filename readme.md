@@ -50,6 +50,20 @@ ke.up.on('a', function(){
 })
 ```
 
+## Modifiers
+You can listen for modifier commands as well - but this is a bit different than typically usage in JavaScript.
+
+The shift modifier gets swallowed in most situations.  For example, if the user presses shift+c, the key down/up events will fire with the event "C", not "shift+c" as is commonly done.
+
+Ctrl modifiers can be listened for, but only for down/up events (pressed events don't fire - at least not in electon.
+
+```js
+ke.down.on('ctrl H', function() {
+   console.log("Pressed -> ctrl H");
+});
+```  
+Unlike normal characters, the ctrl modifier always fires events with the upper case version of the ascii letter pressed.  
+
 ## Special Characters
 
 The following are a list of events that can be listened for on the down/up/pressed event emitters.  You just register handlers for these strings - no mess no fuss.  Your event handler will be called no matter how the user managed to enter the character.

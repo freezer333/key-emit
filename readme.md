@@ -12,7 +12,7 @@ ke = require('key-emit')(document);
 
 ## Responding to key press events
 
-Key press events can be captured using standard ascii character codes.  So if you want to register a handler for the ! character, you just do this:
+Key press events can be captured using standard printable strings.  So if you want to register a handler for the ! character, you just do this:
 
 ```js
 ke.pressed.on('!', function() {

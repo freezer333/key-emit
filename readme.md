@@ -64,7 +64,7 @@ ke.down.on('ctrl H', function() {
 ```  
 Unlike normal characters, the ctrl modifier always fires events with the upper case version of the ascii letter pressed.  
 
-## Special Characters
+## Event list
 
 The following are a list of events that can be listened for on the down/up/pressed event emitters.  You just register handlers for these strings - no mess no fuss.  Your event handler will be called no matter how the user managed to enter the character.
 

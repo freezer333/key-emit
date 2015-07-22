@@ -1,17 +1,31 @@
 # key-emit
-This module is primarily developed for easy-to-use key handling in electron or nw.  It handles creates node.js event emitters for the key down, key up, and key press events and reformats the events so you can listen specifically for certain keys.  
+This module creates node.js -styled event emitters for the key down, key up, and key press events and reformats the events so you can listen specifically for certain keys.  
 
 The module also turns all key events into easier to digest/remember key strings, using a familiar format.   Basically, it removed some of the annoyances of dealing with key codes...
 
 # Examples
 The module returns a constructor that takes the dom element to listen on for key events.
 
+If your in the node environment (electron, nw..)
+
 ```js
 ke = require('key-emit')(document);
 ```
 
-## Responding to key press events
+If you are in the browser straight up, include the browserified bundle
 
+```html
+<script src="../dist/key-emit.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+
+    // key_emit is a global added by the key-emit.js include ^
+    var ke = key_emit(document);
+```
+
+The ke object created by the constructor creates three event emitters for down/up and press events.
+
+## Responding to key press events
 Key press events can be captured using standard printable strings.  So if you want to register a handler for the ! character, you just do this:
 
 ```js

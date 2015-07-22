@@ -42,8 +42,7 @@ var make_key_press_string = function(event) {
     return str;
 }
 
-
-module.exports = function(domElement) {
+var entry = function(domElement) {
     var domElement = domElement || document;
 
     // make three event emitters for the various key event types
@@ -73,5 +72,13 @@ module.exports = function(domElement) {
         down: down,
         up: up
     }
+  }
 
+
+if (typeof module !== 'undefined') {
+  module.exports = entry; 
 }
+else {
+    window.key_emit = entry;
+}
+

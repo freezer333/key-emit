@@ -43,8 +43,7 @@ var make_key_press_string = function(event) {
     return str;
 }
 
-
-module.exports = function(domElement) {
+var entry = function(domElement) {
     var domElement = domElement || document;
 
     // make three event emitters for the various key event types
@@ -74,10 +73,18 @@ module.exports = function(domElement) {
         down: down,
         up: up
     }
+  }
 
+
+if (typeof module !== 'undefined') {
+  module.exports = entry; 
+}
+else {
+    window.key_emit = entry;
 }
 
-},{"./keymaps":2,"wolfy87-eventemitter":3}],2:[function(require,module,exports){
+
+},{"./keymaps":2,"wolfy87-eventemitter":4}],2:[function(require,module,exports){
 var mods = {
     shift: "shift",
     ctrl: "ctrl",
@@ -248,6 +255,8 @@ exports.lower = lower;
 exports.mods = mods;
 exports.pressed = pressed;
 },{}],3:[function(require,module,exports){
+window.key_emit = require(".");
+},{".":1}],4:[function(require,module,exports){
 /*!
  * EventEmitter v4.2.11 - git.io/ee
  * Unlicense - http://unlicense.org/
@@ -721,4 +730,4 @@ exports.pressed = pressed;
     }
 }.call(this));
 
-},{}]},{},[1]);
+},{}]},{},[3]);

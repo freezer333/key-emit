@@ -15,6 +15,9 @@
     "chai": "^3.2.0",
     "mocha": "^2.2.5"
   },
+  "scripts": {
+    "build-js": "browserify main.js -o dist/key-emit.js"
+  },
   "dependencies": {
     "wolfy87-eventemitter": "^4.2.11"
   }

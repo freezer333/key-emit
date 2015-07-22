@@ -14,18 +14,25 @@
         k.pressed.on("S", function(){
             alert("You pressed S!");
         })
-        k.pressed.on("d", function(){
-            alert("You pressed d!");
-        })
+        
         k.pressed.on("F", function(){
             alert("You pressed F!");
+        })
+
+        k.down.on("q", function() {
+            console.log("q is DOWN");
+        })
+        k.up.on("q", function() {
+            console.log("q is UP");
         })
 
     </script>
 </head>
 <body>
 
-    <p>Press a, S, d, or F</p>
+    <p>Press a, S, d, or F and I'll tell you what you've 'pressed'</p>
+
+    <p>Press q and checkout your dev console for up/down events</p>
 
 </body>
 </html>

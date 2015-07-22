@@ -1,5 +1,5 @@
 var maps = require("./keymaps")
-var events = require('events');
+var EventEmitter = require('wolfy87-eventemitter');
 
 
 var make_key_updown_string = function(event) {
@@ -47,9 +47,9 @@ module.exports = function(domElement) {
     var domElement = domElement || document;
 
     // make three event emitters for the various key event types
-    var pressed = new events.EventEmitter();
-    var down = new events.EventEmitter();
-    var up = new events.EventEmitter();
+    var pressed = new EventEmitter();
+    var down = new EventEmitter();
+    var up = new EventEmitter();
 
     var on_key_down = function(event) {
         var str = make_key_updown_string(event);

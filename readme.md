@@ -4,9 +4,10 @@ This module is primarily developed for easy-to-use key handling in electron or n
 The module also turns all key events into easier to digest/remember key strings, using a familiar format.   Basically, it removed some of the annoyances of dealing with key codes...
 
 # Examples
+The module returns a constructor that takes the dom element to listen on for key events.
 
 ```js
-ke = require('key-emit');
+ke = require('key-emit')(document);
 ```
 
 ## Responding to key press events

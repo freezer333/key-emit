@@ -42,6 +42,10 @@ var make_key_press_string = function(event) {
     return str;
 }
 
+var is_number_key = function(str) {
+    return !isNaN(parseInt(str));
+}
+
 var entry = function(domElement) {
     var domElement = domElement || document;
 
@@ -53,14 +57,23 @@ var entry = function(domElement) {
     var on_key_down = function(event) {
         var str = make_key_updown_string(event);
         down.emit(str)
+        if (is_number_key(str)) {
+            down.emit("0-9", parseInt(str));
+        }
     }
     var on_key_up = function(event) {
         var str = make_key_updown_string(event);
-        up.emit(str)
+        up.emit(str);
+        if (is_number_key(str)) {
+            up.emit("0-9", parseInt(str));
+        }
     }
     var on_key_pressed = function(event) {
         var str = make_key_press_string(event);
         pressed.emit(str)
+        if (is_number_key(str)) {
+            pressed.emit("0-9", parseInt(str));
+        }
     }
 
     domElement.addEventListener("keydown", on_key_down, false);

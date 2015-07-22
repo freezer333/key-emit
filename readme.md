@@ -36,7 +36,7 @@ See the listings of character string below for details about special characters.
 ## Responding to key down and up events
 There is literally no difference when using key down and key up events, however there are more events fired (for instance, the Ctrl key doesn't generate a key press, but it does generate and up/down event).
 
-** Note - you don't need to worry about character codes or anything like that...**  In addition, it does away with the differences between keys that really print the same.  For example, the `+` sign will always generate the '+' event, no matter if it is the result of the number pad key or the shift+= key.  Same with upper/lower case as well.
+**Note - you don't need to worry about character codes or anything like that...**  In addition, it does away with the differences between keys that really print the same.  For example, the `+` sign will always generate the '+' event, no matter if it is the result of the number pad key or the shift+= key.  Same with upper/lower case as well.
 
 ```js
 ke.down.on('!', function() {

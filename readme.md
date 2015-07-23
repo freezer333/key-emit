@@ -78,11 +78,21 @@ ke.down.on('ctrl H', function() {
 ```  
 Unlike normal characters, the ctrl modifier always fires events with the upper case version of the ascii letter pressed.  
 
+## Numeric events
+Lots of time you want to use the individual numbers (as integers), 0-9.  key-emit will emit a special event (in addition to the normal press/up/down events) when a character 0-9 is pressed.  It will send the numeric value of the key as an event argument, so you don't need to bother with converting ascii to the number.
+
+```js
+key.pressed.on("0-9", function(value){
+    my_array[value] = true;  // if user types "2", my_array[2] will be set to true
+})
+```
+
 ## Event list
 
 The following are a list of events that can be listened for on the down/up/pressed event emitters.  You just register handlers for these strings - no mess no fuss.  Your event handler will be called no matter how the user managed to enter the character.
 
 ```
+0-9 (number send as argument)
 backspace
 tab
 enter

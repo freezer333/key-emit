@@ -33,9 +33,10 @@
             console.log(value + " is an actual number?  " + (typeof value == 'number'));
         });
 
-        k.pressed.on("any_key", function(key) {
+        k.down.on("any_key", function(key) {
             console.log("you just pressed: " + key)
         })
+
 
     </script>
 </head>

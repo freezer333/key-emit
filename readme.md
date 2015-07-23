@@ -87,6 +87,15 @@ key.pressed.on("0-9", function(value){
 })
 ```
 
+## Where's the [any key](http://cdn.meme.am/instances/43637787.jpg)?
+You can also add a handler on "any_key" event.  The emitters will all generate this event whenever anything is pressed.  The actual event string (ex. "A") will be sent as the argument"
+
+```js
+key.pressed.on("any_key", function(key_event) {
+    console.log("User pressed " + key_event);
+});
+```
+
 ## Event list
 
 The following are a list of events that can be listened for on the down/up/pressed event emitters.  You just register handlers for these strings - no mess no fuss.  Your event handler will be called no matter how the user managed to enter the character.

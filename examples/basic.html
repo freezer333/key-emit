@@ -14,6 +14,9 @@
         k.pressed.on("S", function(){
             alert("You pressed S!");
         })
+        k.pressed.on("d", function(){
+            alert("You pressed d!");
+        })
         
         k.pressed.on("F", function(){
             alert("You pressed F!");
@@ -29,6 +32,10 @@
         k.pressed.on("0-9", function(value) {
             console.log(value + " is an actual number?  " + (typeof value == 'number'));
         });
+
+        k.pressed.on("any_key", function(key) {
+            console.log("you just pressed: " + key)
+        })
 
     </script>
 </head>

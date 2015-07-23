@@ -1,6 +1,6 @@
 {
   "name": "key-emit",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "simplified key emitter",
   "main": "index.js",
   "directories": {

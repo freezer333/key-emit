@@ -87,8 +87,8 @@ key.pressed.on("0-9", function(value){
 })
 ```
 
-## Where's the [any key](http://cdn.meme.am/instances/43637787.jpg)?
-You can also add a handler on "any_key" event.  The emitters will all generate this event whenever anything is pressed.  The actual event string (ex. "A") will be sent as the argument"
+## Where's the any key?
+You can also add a handler on "[any_key](http://cdn.meme.am/instances/43637787.jpg)" event.  The emitters will all generate this event whenever anything is pressed.  The actual event string (ex. "A") will be sent as the argument.  This is nice for debugging and logging.
 
 ```js
 key.pressed.on("any_key", function(key_event) {

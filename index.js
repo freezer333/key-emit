@@ -55,6 +55,7 @@ var emit = function(e, str){
 }
 
 var entry = function(domElement) {
+    console.log(domElement);
     var domElement = domElement || document;
 
     // make three event emitters for the various key event types

@@ -54,7 +54,7 @@ There is literally no difference when using key down and key up events, however 
 
 ```js
 ke.down.on('!', function() {
-    console.log("Down -> Hurrary!");
+    console.log("Down -> Hurray!");
 });
 ke.up.on('A', function() {
 	console.log("Capital A released");

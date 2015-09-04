@@ -1,7 +1,7 @@
 {
   "name": "key-emit",
   "main": "dist/key-emit.js",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "homepage": "https://github.com/freezer333/key-emit",
   "authors": [
     "Scott Frees <scott.frees@gmail.com>"
